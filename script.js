@@ -27,20 +27,25 @@ document.getElementById("dateOutput").textContent = formattedDate;
 // Part 2: Number Conversion
 // ==========================
 
-// TODO:
 // 1. Create at least 4 separate variables:
 //    - at least 2 numeric strings (example: "42")
 //    - at least 1 decimal string (example: "19.75")
 //    - at least 1 non-numeric string (example: "hello")
+let firstValue = "42";
+let secondValue = "19";
+let thirdValue = "19.75";
+let fourthValue = "hello"
 
-// TODO:
 // 2. For EACH variable:
 //
 //    a. Convert the value using Number()
 //    b. Check if it is NaN using Number.isNaN()
 //    c. Check if it is an integer using Number.isInteger()
+let firstNumber = Number(firstValue);
+let secondNumber = Number(secondValue);
+let thirdNumber = Number(thirdValue);
+let fourthNumber = Number(fourthValue);
 
-// TODO:
 // 3. For EACH value, create a sentence showing:
 //    - original value
 //    - converted value
@@ -49,14 +54,35 @@ document.getElementById("dateOutput").textContent = formattedDate;
 //
 // Example format (you must create your own variables):
 // "Original: '42' -> Converted: 42 -> isNaN: false -> isInteger: true"
+let firstIsNaN = Number.isNaN(firstNumber);
+let secondIsNaN = Number.isNaN(secondNumber);
+let thirdIsNaN = Number.isNaN(thirdNumber);
+let fourthIsNaN = Number.isNaN(fourthNumber);
 
-// TODO:
+let firstIsInteger = Number.isInteger(firstNumber);
+let secondIsInteger = Number.isInteger(secondNumber);
+let thirdIsInteger = Number.isInteger(thirdNumber);
+let fourthIsInteger = Number.isInteger(fourthNumber);
+
 // 4. Combine all your results into ONE string
 //    (you can use + to join multiple strings)
+let conversionResults =
+"Original: '" + firstValue + "' -> Converted: " + firstNumber +
+" -> isNaN: " + firstIsNaN + " -> isInteger: " + firstIsInteger + "<br>" +
 
-// TODO:
+"Original: '" + secondValue + "' -> Converted: " + secondNumber +
+" -> isNaN: " + secondIsNaN + " -> isInteger: " + secondIsInteger + "<br>" +
+
+"Original: '" + thirdValue + "' -> Converted: " + thirdNumber +
+" -> isNaN: " + thirdIsNaN + " -> isInteger: " + thirdIsInteger + "<br>" +
+
+"Original: '" + fourthValue + "' -> Converted: " + fourthNumber +
+" -> isNaN: " + fourthIsNaN + " -> isInteger: " + fourthIsInteger;
+
 // 5. Display the final result inside the element:
 //    id="numberConversionOutput"
+document.getElementById("numberConversionOutput").innerHTML = conversionResults;
+
 
 // ==========================
 // Part 3: Math & Formatting
@@ -64,20 +90,32 @@ document.getElementById("dateOutput").textContent = formattedDate;
 
 // TODO:
 // 1. Create at least 2-3 numeric variables
-//
+let firstNumberValue = 50;
+let secondNUmberValue = 25;
+let thirdNumberValue = 10;
+
 // 2. Perform calculations:
 //    - at least one addition
 //    - at least one other operation (subtract, multiply, or divide)
-//
+let additionResult = firstNumberValue + secondNUmberValue;
+let multiplicationResult = firstNumberValue * thirdNumberValue;
+
 // 3. Use at least ONE of the following:
 //    - toFixed()
 //    - toLocaleString()
 //    - Number.parseInt()
 //    - Number.parseFloat()
-//
+let formattedAddition = additionResult.toFixed(2);
+let formattedMultiplication = multiplicationResult.toFixed(2);
+
 // 4. Build a string showing your results
-//
+let mathResults = "Addition: " + firstNumberValue + " + " + secondNumberValue + " = " + formattedAddition + "<br>" +
+
+"Multiplication: " + firstNumberValue + " * " + thirdNumberValue +
+" = " + formattedMultiplication;
+
 // 5. Display the results inside the element with id="mathOutput"
+document.getElementById("mathOutput").innerHTML = mathResults;
 
 // ==========================
 // Part 4: Conditionals
@@ -85,7 +123,20 @@ document.getElementById("dateOutput").textContent = formattedDate;
 
 // TODO:
 // 1. Write at least TWO if/else statements
-//
+let firstMessage;
+if (fourthIsNaN) {
+firstMessage = "The value 'hello' is not a valid number.";
+} else {
+firstMessage = "The value 'hello' is a valid number.";
+}
+
+let secondMessage;
+if (additionResult > 100) {
+secondMessage = "The addition result is greater than 100.";
+} else {
+secondMessage = "The addition result is not greater than 100.";
+}
+
 // Ideas:
 // - check if a value is NaN
 // - check if a number is an integer
@@ -93,3 +144,4 @@ document.getElementById("dateOutput").textContent = formattedDate;
 //
 // 2. Display a message on the page based on the condition
 //    (append it to an existing section or create a new message)
+document.getElementById("numberConversionOutput").innerHTML += "<br>" + firstMessage + "<br>" + secondMessage;
