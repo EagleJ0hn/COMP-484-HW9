@@ -91,13 +91,13 @@ document.getElementById("numberConversionOutput").innerHTML = conversionResults;
 // TODO:
 // 1. Create at least 2-3 numeric variables
 let firstNumberValue = 50;
-let secondNUmberValue = 25;
+let secondNumberValue = 25;
 let thirdNumberValue = 10;
 
 // 2. Perform calculations:
 //    - at least one addition
 //    - at least one other operation (subtract, multiply, or divide)
-let additionResult = firstNumberValue + secondNUmberValue;
+let additionResult = firstNumberValue + secondNumberValue;
 let multiplicationResult = firstNumberValue * thirdNumberValue;
 
 // 3. Use at least ONE of the following:
