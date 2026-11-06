@@ -31,9 +31,9 @@ document.getElementById("dateOutput").textContent = formattedDate;
 //    - at least 2 numeric strings (example: "42")
 //    - at least 1 decimal string (example: "19.75")
 //    - at least 1 non-numeric string (example: "hello")
-let firstValue = "42";
-let secondValue = "19";
-let thirdValue = "19.75";
+let firstValue = "90";
+let secondValue = "80";
+let thirdValue = "95";
 let fourthValue = "hello"
 
 // 2. For EACH variable:
@@ -90,29 +90,28 @@ document.getElementById("numberConversionOutput").innerHTML = conversionResults;
 
 // TODO:
 // 1. Create at least 2-3 numeric variables
-let firstNumberValue = 50;
-let secondNumberValue = 25;
-let thirdNumberValue = 10;
+let firstNumberValue = firstNumber;
+let secondNumberValue = secondNumber;
+let thirdNumberValue = thirdNumber;
 
 // 2. Perform calculations:
 //    - at least one addition
 //    - at least one other operation (subtract, multiply, or divide)
-let additionResult = firstNumberValue + secondNumberValue;
-let multiplicationResult = firstNumberValue * thirdNumberValue;
+let totalGrades = firstNumberValue + secondNumberValue + thirdNumberValue;
+let averageGrade = totalGrades / 3;
 
 // 3. Use at least ONE of the following:
 //    - toFixed()
 //    - toLocaleString()
 //    - Number.parseInt()
 //    - Number.parseFloat()
-let formattedAddition = additionResult.toFixed(2);
-let formattedMultiplication = multiplicationResult.toFixed(2);
+let formattedAverage = averageGrade.toFixed(2);
+
 
 // 4. Build a string showing your results
-let mathResults = "Addition: " + firstNumberValue + " + " + secondNumberValue + " = " + formattedAddition + "<br>" +
-
-"Multiplication: " + firstNumberValue + " * " + thirdNumberValue +
-" = " + formattedMultiplication;
+let mathResults =
+"Total Grades: " + totalGrades + "<br>" +
+"Average Grade: " + formattedAverage;
 
 // 5. Display the results inside the element with id="mathOutput"
 document.getElementById("mathOutput").innerHTML = mathResults;
@@ -125,16 +124,16 @@ document.getElementById("mathOutput").innerHTML = mathResults;
 // 1. Write at least TWO if/else statements
 let firstMessage;
 if (fourthIsNaN) {
-firstMessage = "The value 'hello' is not a valid number.";
+firstMessage = "One of the entered values is not a valid grade.";
 } else {
-firstMessage = "The value 'hello' is a valid number.";
+firstMessage = "All entered values are valid grades.";
 }
 
-let secondMessage;
-if (additionResult > 100) {
-secondMessage = "The addition result is greater than 100.";
-} else {
-secondMessage = "The addition result is not greater than 100.";
+let letterGrade;
+if(averageGrade >= 90){
+    letterGrade = "A";
+} else { 
+    letterGrade = "Below A";
 }
 
 // Ideas:
@@ -144,4 +143,4 @@ secondMessage = "The addition result is not greater than 100.";
 //
 // 2. Display a message on the page based on the condition
 //    (append it to an existing section or create a new message)
-document.getElementById("numberConversionOutput").innerHTML += "<br>" + firstMessage + "<br>" + secondMessage;
+document.getElementById("mathOutput").innerHTML += "<br>" + firstMessage + "<br>" + letterGrade;
