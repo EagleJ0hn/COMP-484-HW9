@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content = "with=device-width, initial-scale=1.0" />
     <title>JavaScript Mini Demo</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Grade Score Calculator</h1>
@@ -10,6 +12,21 @@
     <!-- Date Section -->
     <h2>Date Display</h2>
     <p id="dateOutput">Date will appear here</p>
+    
+    <section class="calculator">
+        <h2>Enter Your Grades</h2>
+
+        <label for="grade1">Grade 1</label>
+        <input type="text" id="grade1" placeholder="Enter first grade" />
+
+        <label for="grade2">Grade 2</label>
+        <input type="text" id="grade2" placeholder="Enter second grade" />
+
+        <label for="grade3">Grade 3</label>
+        <input type="text" id="grade3" placeholder="Enter third grade" />
+
+        <button id="calculateButton">Calculate Average</button>
+      </section>
 
     <!-- Number Conversion Section -->
     <h2>Number Conversion Tests</h2>
