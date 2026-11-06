@@ -16,10 +16,10 @@
     * toFixed()
 
 2. Your **GitHub Pages link**
-
+https://eaglej0hn.github.io/COMP-484-HW9/
 
 3. Path to a screenshot file of the finished webpage
-
+screenshot/webpage.png
 
 4. A short reflection of **4-5 sentences** that answers:
    - What part was easiest?
